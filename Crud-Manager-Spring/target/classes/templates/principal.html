@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+     <div th:replace="cabecalho :: head"></div>
+    <title>Empresa de Cursos</title>
+</head>
+<body>
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Empresa de Cursos</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/users">Usuários</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/class">Cursos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/enrollment">Matrículas</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <div class="container mt-4">
+        <div class="jumbotron">
+            <h1 class="display-4">Bem-vindo à Empresa de Cursos!</h1>
+            <p class="lead">Oferecemos uma ampla variedade de cursos para atender às suas necessidades educacionais.</p>
+            <hr class="my-4">
+            <p>Explore nossos cursos, faça sua matrícula e gerencie seus dados de usuário através das opções acima.</p>
+        </div>
+
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">Usuários</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Gerenciar Usuários</h5>
+                        <p class="card-text">Veja e edite os detalhes dos usuários registrados.</p>
+                        <a href="/users" class="btn btn-light">Ver Usuários</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-white bg-success mb-3">
+                    <div class="card-header">Cursos</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Gerenciar Cursos</h5>
+                        <p class="card-text">Adicione, edite ou exclua cursos disponíveis.</p>
+                        <a href="/class" class="btn btn-light">Ver Cursos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-white bg-danger mb-3">
+                    <div class="card-header">Matrículas</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Gerenciar Matrículas</h5>
+                        <p class="card-text">Veja e gerencie as matrículas dos usuários nos cursos.</p>
+                        <a href="/enrollment" class="btn btn-light">Ver Matrículas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

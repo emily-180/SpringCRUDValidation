@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<div th:replace="cabecalho :: head"></div>
+		
+		<title>Crud Manager - Matricula</title>
+	</head>
+	<body>
+		<div class="container my-2">
+			<h1>Matrículas</h1>
+			<div>				
+				<a th:href="@{enrollment/form}" class="btn btn-primary btn-sm mb-3 float-right">
+		   			Adicionar Matricula
+                </a>
+			</div>
+			<table class="table table-striped table-responsive-md">
+				<thead>
+					<tr>
+						<th>Usuario</th>
+						<th>Curso</th>
+						<th>Status</th>
+						<th>Valor Mensal</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="enrollment : ${enrollments}">
+						<td th:text="${enrollment.user.name}"></td>
+						<td th:text="${enrollment.clazz.name}"></td>
+						<td th:text="${enrollment.status}"></td>
+						<td th:text="${enrollment.price}"></td>
+						<td>
+							<a th:href="@{/enrollment/update/{id}(id = ${enrollment.id})}" class="btn btn-primary">Alterar</a>
+							<a th:href="@{/enrollment/delete/{id}(id = ${enrollment.id})}" class="btn btn-danger">Excluir</a>			
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<hr>
+
+        <a th:href="@{/principal}">Página Principal</a>
+		</div>
+		
+	</body>
+</html>
